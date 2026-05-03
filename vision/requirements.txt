@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+ultralytics
+ftfy
+regex
+git+https://github.com/openai/CLIP.git
+python-multipart
+python-dotenv
+numpy
+opencv-python-headless

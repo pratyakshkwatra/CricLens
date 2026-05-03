@@ -69,4 +69,3 @@ The system automatically manages:
 
 ---
 **CricLens** | *High-Performance Match Intelligence for the Modern Game.*
-# CricLens

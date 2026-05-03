@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #a3e635;
+  --color-accent: #22c55e;
+  --color-bg-dark: #020202;
+  --color-card-bg: rgba(15, 15, 15, 0.7);
+  
+  --font-sans: 'Outfit', sans-serif;
+  --font-display: 'Inter Tight', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#020202] text-white antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 50% -20%, rgba(163, 230, 53, 0.1), transparent),
+      linear-gradient(rgba(163, 230, 53, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(163, 230, 53, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+  }
+
+  h1, h2, h3, .font-display {
+    @apply font-black italic uppercase tracking-tighter;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl transition-all duration-500;
+  }
+  
+  .glass-card:hover {
+    @apply border-primary/30 bg-white/10 shadow-[0_0_40px_rgba(163,230,53,0.1)];
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 bg-primary text-black font-black uppercase italic rounded-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)] hover:shadow-[0_0_40px_rgba(163,230,53,0.5)];
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #020202; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #a3e635; }
